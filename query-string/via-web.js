@@ -10,7 +10,12 @@ let server = http.createServer(function(request, respon) {
 
     respon.writeHead(200, {'Content-Type': 'text/html'})
     respon.write(
-        '<h1>Nama saya adalah ' + url_object.nama + ', bekerja sebagai ' + url_object.pekerjaan + '.</h1>'
+        `<pre>` +
+        `url asli           : <b>${url_asli}</b><br>` +
+        `url query string   : <b>${url_queryString}</b><br>` +
+        `url object         : <b>${JSON.stringify(url_object)}</b><br>` +
+        `</pre>` +
+        `<h1>Nama saya adalah ${url_object.nama}, bekerja sebagai ${url_object.pekerjaan}.</h1>`
     )
     respon.end()
 })
