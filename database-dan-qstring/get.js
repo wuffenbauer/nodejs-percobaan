@@ -29,7 +29,7 @@ let server = http.createServer(function(req, res) {
                     <li>Alamat: ${hasil[i].alamat}</li>
                     <li>Golongan Darah: ${hasil[i].gol_darah}</li>
                 </ul>`
-            } 
+            }
         }   
         else {
             datakaryawan = `<h2>Tidak ada karyawan dengan nama ${url_object.nama}</h2>`
